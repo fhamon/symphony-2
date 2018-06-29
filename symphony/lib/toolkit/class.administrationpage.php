@@ -256,9 +256,9 @@ class AdministrationPage extends HTMLPage
         $li = new XMLElement('li', $action);
 
         if ($append) {
-            $ul->prependChild($li);
-        } else {
             $ul->appendChild($li);
+        } else {
+            $ul->prependChild($li);
         }
     }
 
@@ -316,7 +316,7 @@ class AdministrationPage extends HTMLPage
      *  If any other value is passed, no button will be added.
      * @throws InvalidArgumentException
      */
-    public function insertDrawer(XMLElement $drawer, $position = 'horizontal', $button = 'append')
+    public function insertDrawer(XMLElement $drawer, $position = 'horizontal', $button = 'append', $icon = '')
     {
         $drawer->addClass($position);
         $drawer->setAttribute('data-position', $position);
@@ -326,7 +326,7 @@ class AdministrationPage extends HTMLPage
         if (in_array($button, array('prepend', 'append'))) {
             $this->insertAction(
                 Widget::Anchor(
-                    $drawer->getAttribute('data-label'),
+                    ($icon === '') ? $drawer->getAttribute('data-label') : $icon . '<span><span>' . $drawer->getAttribute('data-label') . '</span></span>',
                     '#' . $drawer->getAttribute('id'),
                     null,
                     'button drawer ' . $position
