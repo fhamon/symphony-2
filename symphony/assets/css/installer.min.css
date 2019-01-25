@@ -259,12 +259,12 @@ html {
   font-size: 62.5%;
   min-height: 100%;
 }
-@media (min-width: var(--sm)) {
+@media (min-width: 1024px) {
   html {
     font-size: 50%;
   }
 }
-@media (min-width: var(--lg)) {
+@media (min-width: 1440px) {
   html {
     font-size: 62.5%;
   }
@@ -279,7 +279,7 @@ body {
   min-width: var(--xxs);
   min-height: 100%;
 }
-@media (max-width: calc(var(--sm) - 1)) {
+@media (max-width: 1023px) {
   body {
     padding-left: 0;
   }
@@ -537,7 +537,7 @@ var {
 .columns.two > .invalid {
   width: 50%;
 }
-@media (max-width: calc(var(--xs) - 1)) {
+@media (max-width: 766px) {
   .columns.two .column,
   .columns.two > .invalid {
     width: 100%;
@@ -547,7 +547,7 @@ var {
 .columns.two > .invalid.primary {
   width: calc(100% - var(--spacing-huger));
 }
-@media (max-width: calc(var(--md) - 1)) {
+@media (max-width: 1279px) {
   .columns.two .column.primary,
   .columns.two > .invalid.primary {
     width: 100%;
@@ -559,7 +559,7 @@ var {
   padding-left: var(--spacing-mid);
   width: var(--spacing-huger);
 }
-@media (max-width: calc(var(--md) - 1)) {
+@media (max-width: 1279px) {
   .columns.two .column.secondary,
   .columns.two > .invalid.secondary {
     width: 100%;
@@ -1223,7 +1223,7 @@ fieldset.settings {
   margin-bottom: var(--spacing-smallish);
   padding: 0;
 }
-@media (min-width: var(--md)) {
+@media (min-width: 1280px) {
   fieldset.settings {
     padding-left: var(--spacing-huge);
   }
@@ -1231,7 +1231,7 @@ fieldset.settings {
 fieldset.settings > legend {
   line-height: 1.4em;
 }
-@media (min-width: var(--md)) {
+@media (min-width: 1280px) {
   fieldset.settings > legend {
     position: absolute;
     top: -0.1rem;
@@ -1239,7 +1239,7 @@ fieldset.settings > legend {
     width: calc(var(--spacing-huge) - var(--spacing-smallish));
   }
 }
-@media (max-width: calc(var(--md) - 1)) {
+@media (max-width: 1279px) {
   fieldset.settings > legend {
     color: var(--color-accent);
     font-size: var(--text-big);
@@ -1295,7 +1295,7 @@ fieldset.settings > legend + .help {
   width: calc(var(--spacing-huge) - var(--spacing-smallish));
   width: 17rem;
 }
-@media (max-width: calc(var(--md) - 1)) {
+@media (max-width: 1279px) {
   fieldset.settings > legend + .help {
     position: relative;
     font-size: var(--text-small);
@@ -1315,7 +1315,7 @@ fieldset.settings > .columns.two .column {
 fieldset.settings + fieldset.settings {
   margin-top: var(--spacing-midlarge);
 }
-@media (max-width: calc(var(--md) - 1)) {
+@media (max-width: 1279px) {
   fieldset.settings + fieldset.settings {
     margin-top: var(--spacing-smallish);
   }
@@ -1994,7 +1994,7 @@ form {
   padding: var(--spacing-smallish) var(--spacing-smallish) var(--spacing-mid);
   max-width: 90rem;
 }
-@media (min-width: var(--sm)) {
+@media (min-width: 1024px) {
   form {
     padding-left: var(--spacing-huge);
   }
@@ -2007,7 +2007,7 @@ h1 {
   font-size: var(--text-current);
   margin-bottom: var(--spacing-smallish);
 }
-@media (min-width: var(--sm)) {
+@media (min-width: 1024px) {
   h1 {
     position: fixed;
     margin: var(--spacing-smallest) 0 var(--spacing-smallish) calc(var(--spacing-huge) *- 1);
