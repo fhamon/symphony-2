@@ -403,6 +403,9 @@ var {
   width: 1px;
   height: 1px;
 }
+svg.placeholder {
+  color: var(--color-main-lightest);
+}
 
 /**
  * Symphony Affix
@@ -1417,9 +1420,6 @@ fieldset.settings > legend + .help p {
 fieldset.settings li .label {
   margin: 1rem 0 1.25rem;
 }
-fieldset.settings > .columns.two .column {
-  margin-bottom: 0;
-}
 fieldset.settings + fieldset.settings {
   margin-top: var(--spacing-midlarge);
 }
@@ -1433,6 +1433,9 @@ fieldset.settings + fieldset.settings {
     border-top: 1px solid var(--color-main-light);
     width: 100%;
   }
+}
+fieldset.settings.condensed label:last-of-type {
+  margin-bottom: 0;
 }
 fieldset.settings:last-of-type {
   margin-bottom: 0;
@@ -3830,6 +3833,7 @@ textarea:focus ~ .suggestions:not(:empty) {
   transition-timing-function: var(--ease-current);
   transition-property: opacity;
   transition-duration: var(--duration-shorter);
+  overflow: hidden;
 }
 .modal .modal-content.top {
   top: 0;
@@ -3846,6 +3850,37 @@ textarea:focus ~ .suggestions:not(:empty) {
 .modal .modal-content.is-open {
   opacity: 1;
   pointer-events: all;
+}
+.modal .modal-content button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: var(--spacing-micro) var(--spacing-smallest);
+  background-color: var(--color-clear);
+  width: var(--spacing-larger);
+  border-radius: 0;
+  font-size: var(--text-current);
+}
+.modal .modal-content button svg {
+  margin-right: var(--spacing-smallest);
+}
+.modal .modal-content button:hover {
+  color: var(--color-main-dark);
+  background-color: var(--color-ui);
+}
+.modal .modal-content button[name="action[delete]"]:hover {
+  color: var(--color-clear);
+  background-color: var(--color-error);
+}
+#contents-actions .modal-trigger:hover {
+  color: var(--color-clear);
+  background-color: var(--color-main-light);
 }
 
 /**
@@ -4404,7 +4439,7 @@ body {
   border-radius: var(--radius-current);
   position: absolute;
   right: 0;
-  top: 100%;
+  top: 0;
   color: var(--color-main-dark);
   margin: 0 0 var(--spacing-micro);
   background: var(--color-clear);
@@ -4412,6 +4447,7 @@ body {
   pointer-events: none;
   z-index: 200;
   overflow: hidden;
+  border: 1px solid var(--color-main-lightest);
   box-shadow: var(--shadow);
 }
 .session > ul > li > a {
@@ -4422,19 +4458,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   color: currentColor;
-  padding: var(--spacing-smaller) var(--spacing-smallest);
-  min-width: 20rem;
+  padding: var(--spacing-smallerish);
+  min-width: var(--spacing-largest);
   box-sizing: border-box;
   font-size: var(--text-current);
   line-height: 1em;
@@ -4442,13 +4474,13 @@ body {
 .session > ul > li > a svg {
   width: var(--spacing-smallerish);
   height: var(--spacing-smallerish);
+  margin-right: var(--spacing-smallerish);
 }
 .session > ul > li > a:hover {
-  background-color: var(--color-accent);
-  color: var(--color-clear);
+  background-color: var(--color-accent-light);
 }
-.session > ul > li + li {
-  border-top: 1px solid var(--color-ui);
+.session > ul > li.logout {
+  border-top: 1px solid var(--color-main-lightest);
 }
 .session.is-panel-opened > div svg {
   -webkit-transform: rotateZ(180deg);
@@ -4821,7 +4853,7 @@ body {
   transition-property: opacity, transform;
   background-color: var(--color-accent-light);
   min-height: calc(100vh - var(--spacing-midlarge));
-  padding: var(--spacing-smaller);
+  padding: 0 var(--spacing-smaller) var(--spacing-smaller) var(--spacing-smaller);
   box-sizing: border-box;
   border-top-left-radius: var(--radius-big);
   border-top-right-radius: var(--radius-big);
@@ -4863,7 +4895,7 @@ body {
     padding: var(--spacing-midlarge) var(--spacing-smallest);
   }
 }
-#contents-actions {
+#contents-actions:not(:empty) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4875,7 +4907,7 @@ body {
           justify-content: flex-end;
   padding: var(--spacing-micro) 0;
 }
-#contents-actions .actions {
+#contents-actions:not(:empty) .actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4887,31 +4919,50 @@ body {
           justify-content: flex-end;
   margin: 0;
 }
-#contents-actions .actions > li a {
+#contents-actions:not(:empty) .actions > li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: var(--spacing-smallest);
   border-radius: 100%;
+  margin-right: var(--spacing-micro);
 }
-#contents-actions .actions > li a svg {
+#contents-actions:not(:empty) .actions > li a svg {
   width: 20px;
   height: 20px;
 }
-#contents-actions .actions > li a:hover {
+#contents-actions:not(:empty) .actions > li a:hover {
   color: var(--color-clear);
   background-color: var(--color-main-light);
 }
-#contents-actions .svg-icon-container {
+#contents-actions:not(:empty) .actions > button {
   position: relative;
-}
-#contents-actions .svg-icon-container input {
-  all: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: var(--spacing-smallest);
+  cursor: pointer;
   border-radius: 100%;
-  width: var(--spacing-small);
-  height: var(--spacing-small);
+  transition-property: background-color, color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--ease-current);
+  margin-right: var(--spacing-micro);
 }
-#contents-actions .svg-icon-container input:hover {
+#contents-actions:not(:empty) .actions > button:last-of-type {
+  margin-right: 0;
+}
+#contents-actions:not(:empty) .actions > button svg {
+  width: 20px;
+  height: 20px;
+}
+#contents-actions:not(:empty) .actions > button:hover {
+  color: var(--color-clear);
   background-color: var(--color-main-light);
 }
 /*--------------------------------------------------------------------------

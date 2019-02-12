@@ -403,6 +403,9 @@ var {
   width: 1px;
   height: 1px;
 }
+svg.placeholder {
+  color: var(--color-main-lightest);
+}
 
 /**
  * Symphony Grids and columns
@@ -1319,9 +1322,6 @@ fieldset.settings > legend + .help p {
 fieldset.settings li .label {
   margin: 1rem 0 1.25rem;
 }
-fieldset.settings > .columns.two .column {
-  margin-bottom: 0;
-}
 fieldset.settings + fieldset.settings {
   margin-top: var(--spacing-midlarge);
 }
@@ -1335,6 +1335,9 @@ fieldset.settings + fieldset.settings {
     border-top: 1px solid var(--color-main-light);
     width: 100%;
   }
+}
+fieldset.settings.condensed label:last-of-type {
+  margin-bottom: 0;
 }
 fieldset.settings:last-of-type {
   margin-bottom: 0;
