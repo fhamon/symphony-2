@@ -814,11 +814,17 @@ body {
 
 }
 
-#contents-actions:not(:empty) {
+#contents-actions {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	padding: var(--spacing-micro) 0;
+
+	&:empty {
+		padding: 0;
+		margin: 0;
+		height: var(--spacing-smaller);
+	}
 
 	.actions {
 		display: flex;

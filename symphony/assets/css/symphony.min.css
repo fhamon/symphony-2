@@ -4887,7 +4887,7 @@ body {
     padding: var(--spacing-midlarge) var(--spacing-smallest);
   }
 }
-#contents-actions:not(:empty) {
+#contents-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4899,7 +4899,12 @@ body {
           justify-content: flex-end;
   padding: var(--spacing-micro) 0;
 }
-#contents-actions:not(:empty) .actions {
+#contents-actions:empty {
+  padding: 0;
+  margin: 0;
+  height: var(--spacing-smaller);
+}
+#contents-actions .actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4911,7 +4916,7 @@ body {
           justify-content: flex-end;
   margin: 0;
 }
-#contents-actions:not(:empty) .actions > li a {
+#contents-actions .actions > li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4919,15 +4924,15 @@ body {
   border-radius: 100%;
   margin-right: var(--spacing-micro);
 }
-#contents-actions:not(:empty) .actions > li a svg {
+#contents-actions .actions > li a svg {
   width: 20px;
   height: 20px;
 }
-#contents-actions:not(:empty) .actions > li a:hover {
+#contents-actions .actions > li a:hover {
   color: var(--color-clear);
   background-color: var(--color-main-light);
 }
-#contents-actions:not(:empty) .actions > button {
+#contents-actions .actions > button {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4946,14 +4951,14 @@ body {
   transition-timing-function: var(--ease-current);
   margin-right: var(--spacing-micro);
 }
-#contents-actions:not(:empty) .actions > button:last-of-type {
+#contents-actions .actions > button:last-of-type {
   margin-right: 0;
 }
-#contents-actions:not(:empty) .actions > button svg {
+#contents-actions .actions > button svg {
   width: 20px;
   height: 20px;
 }
-#contents-actions:not(:empty) .actions > button:hover {
+#contents-actions .actions > button:hover {
   color: var(--color-clear);
   background-color: var(--color-main-light);
 }
