@@ -1588,13 +1588,8 @@ fieldset.frame,
 /*--------------------------------------------------------------------------
 	Controls
 --------------------------------------------------------------------------*/
-.duplicator {
-  margin-bottom: 8.2rem;
-}
 .duplicator .apply {
-  position: absolute;
-  right: 0;
-  bottom: -5.2rem;
+  margin-top: 2rem;
 }
 .frame .destructor,
 .frame .debug {
@@ -1619,9 +1614,6 @@ fieldset.frame,
   cursor: not-allowed;
 }
 /* Applicators */
-.frame .apply {
-  margin-top: var(--spacing-smallest);
-}
 .frame .actions {
   margin: 0 0 var(--spacing-smallest);
 }
