@@ -228,6 +228,10 @@ body {
 		@media (max-width: (@sm - 1)){
 			display: flex;
 			margin: 0 3rem;
+
+			> div {
+				flex-grow: 0;
+			}
 		}
 	}
 
@@ -451,6 +455,7 @@ body {
 				box-sizing: border-box;
 				font-size: var(--text-current);
 				line-height: 1em;
+				font-weight: 500;
 
 				svg {
 					width: var(--spacing-smallerish);
@@ -890,9 +895,6 @@ body {
 	#contents {
 
 		form {
-			background-color: var(--color-ui);
-			padding: 0 var(--spacing-smaller);
-
 			label {
 				margin-bottom: 0;
 			}

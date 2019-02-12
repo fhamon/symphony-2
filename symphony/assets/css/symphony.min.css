@@ -3853,11 +3853,12 @@ textarea:focus ~ .suggestions:not(:empty) {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: var(--spacing-micro) var(--spacing-smallest);
+  padding: var(--spacing-smallest);
   background-color: var(--color-clear);
   width: var(--spacing-larger);
   border-radius: 0;
   font-size: var(--text-current);
+  font-weight: 500;
 }
 .modal .modal-content button svg {
   margin-right: var(--spacing-smallest);
@@ -4195,6 +4196,11 @@ body {
     display: flex;
     margin: 0 3rem;
   }
+  #header .session > div {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
 }
 @media (max-width: 1023px) {
   #header:not(.opened) {
@@ -4462,6 +4468,7 @@ body {
   box-sizing: border-box;
   font-size: var(--text-current);
   line-height: 1em;
+  font-weight: 500;
 }
 .session > ul > li > a svg {
   width: var(--spacing-smallerish);
@@ -4965,10 +4972,6 @@ body {
 /*--------------------------------------------------------------------------
 	Publish
 --------------------------------------------------------------------------*/
-#publish.page-single #contents form {
-  background-color: var(--color-ui);
-  padding: 0 var(--spacing-smaller);
-}
 #publish.page-single #contents form label {
   margin-bottom: 0;
 }
