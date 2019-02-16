@@ -22,8 +22,8 @@
   /*-----------------------------------------------------------------------------
 		Spacings
 	-----------------------------------------------------------------------------*/
-  --spacing-nano: .2rem;
-  --spacing-micro: .8rem;
+  --spacing-nano: 0.3rem;
+  --spacing-micro: 0.8rem;
   --spacing-smallest: 1rem;
   --spacing-smallerish: 1.5rem;
   --spacing-smaller: 2rem;
@@ -45,6 +45,8 @@
   --color-main-dark: #172D4D;
   --color-accent: #0D6EFF;
   --color-accent-light: #E6F2FF;
+  --color-accent-alt: #F9D362;
+  --color-accent-alt-light: #FFF7D9;
   --color-success: #3EDD88;
   --color-success-light: #E4F7F3;
   --color-error: #FF452B;
@@ -429,8 +431,8 @@ svg.placeholder {
   /*-----------------------------------------------------------------------------
 		Spacings
 	-----------------------------------------------------------------------------*/
-  --spacing-nano: .2rem;
-  --spacing-micro: .8rem;
+  --spacing-nano: 0.3rem;
+  --spacing-micro: 0.8rem;
   --spacing-smallest: 1rem;
   --spacing-smallerish: 1.5rem;
   --spacing-smaller: 2rem;
@@ -452,6 +454,8 @@ svg.placeholder {
   --color-main-dark: #172D4D;
   --color-accent: #0D6EFF;
   --color-accent-light: #E6F2FF;
+  --color-accent-alt: #F9D362;
+  --color-accent-alt-light: #FFF7D9;
   --color-success: #3EDD88;
   --color-success-light: #E4F7F3;
   --color-error: #FF452B;
@@ -605,8 +609,8 @@ svg.placeholder {
   /*-----------------------------------------------------------------------------
 		Spacings
 	-----------------------------------------------------------------------------*/
-  --spacing-nano: .2rem;
-  --spacing-micro: .8rem;
+  --spacing-nano: 0.3rem;
+  --spacing-micro: 0.8rem;
   --spacing-smallest: 1rem;
   --spacing-smallerish: 1.5rem;
   --spacing-smaller: 2rem;
@@ -628,6 +632,8 @@ svg.placeholder {
   --color-main-dark: #172D4D;
   --color-accent: #0D6EFF;
   --color-accent-light: #E6F2FF;
+  --color-accent-alt: #F9D362;
+  --color-accent-alt-light: #FFF7D9;
   --color-success: #3EDD88;
   --color-success-light: #E4F7F3;
   --color-error: #FF452B;
@@ -1366,8 +1372,8 @@ fieldset.settings:last-of-type {
   /*-----------------------------------------------------------------------------
 		Spacings
 	-----------------------------------------------------------------------------*/
-  --spacing-nano: .2rem;
-  --spacing-micro: .8rem;
+  --spacing-nano: 0.3rem;
+  --spacing-micro: 0.8rem;
   --spacing-smallest: 1rem;
   --spacing-smallerish: 1.5rem;
   --spacing-smaller: 2rem;
@@ -1389,6 +1395,8 @@ fieldset.settings:last-of-type {
   --color-main-dark: #172D4D;
   --color-accent: #0D6EFF;
   --color-accent-light: #E6F2FF;
+  --color-accent-alt: #F9D362;
+  --color-accent-alt-light: #FFF7D9;
   --color-success: #3EDD88;
   --color-success-light: #E4F7F3;
   --color-error: #FF452B;
@@ -1791,7 +1799,7 @@ fieldset.settings .collapsible {
 }
 #login .frame .sun .layer {
   position: absolute;
-  background-color: var(--color-brand);
+  background-color: var(--color-accent-alt);
   border-radius: 100%;
   opacity: 0.4;
   -webkit-animation: Wave 1200ms cubic-bezier(0.19, 1, 0.22, 1) 1 both;
@@ -1927,8 +1935,8 @@ fieldset.settings .collapsible {
   /*-----------------------------------------------------------------------------
 		Spacings
 	-----------------------------------------------------------------------------*/
-  --spacing-nano: .2rem;
-  --spacing-micro: .8rem;
+  --spacing-nano: 0.3rem;
+  --spacing-micro: 0.8rem;
   --spacing-smallest: 1rem;
   --spacing-smallerish: 1.5rem;
   --spacing-smaller: 2rem;
@@ -1950,6 +1958,8 @@ fieldset.settings .collapsible {
   --color-main-dark: #172D4D;
   --color-accent: #0D6EFF;
   --color-accent-light: #E6F2FF;
+  --color-accent-alt: #F9D362;
+  --color-accent-alt-light: #FFF7D9;
   --color-success: #3EDD88;
   --color-success-light: #E4F7F3;
   --color-error: #FF452B;
