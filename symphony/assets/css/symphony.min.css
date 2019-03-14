@@ -81,6 +81,8 @@
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -492,6 +494,8 @@ svg.placeholder {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -590,6 +594,8 @@ svg.placeholder {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -768,6 +774,8 @@ svg.placeholder {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -1528,6 +1536,8 @@ fieldset.settings:last-of-type {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -1757,29 +1767,6 @@ tr.ordering a {
   color: var(--color-clear);
 }
 /*-----------------------------------------------------------------------------
-	Blueprints
------------------------------------------------------------------------------*/
-#blueprints-datasources .field-publish_tabs.instance .frame-header,
-#blueprints-sections .field-publish_tabs.instance .frame-header,
-#blueprints-datasources .field-field_group_start.instance .frame-header,
-#blueprints-sections .field-field_group_start.instance .frame-header,
-#blueprints-datasources .field-field_group_end.instance .frame-header,
-#blueprints-sections .field-field_group_end.instance .frame-header {
-  background-color: var(--color-accent) !important;
-}
-#blueprints-datasources .field-publish_tabs.instance .frame-header *,
-#blueprints-sections .field-publish_tabs.instance .frame-header *,
-#blueprints-datasources .field-field_group_start.instance .frame-header *,
-#blueprints-sections .field-field_group_start.instance .frame-header *,
-#blueprints-datasources .field-field_group_end.instance .frame-header *,
-#blueprints-sections .field-field_group_end.instance .frame-header * {
-  color: var(--color-clear) !important;
-}
-#blueprints-datasources .field-publishnotes.instance .frame-header,
-#blueprints-sections .field-publishnotes.instance .frame-header {
-  background-color: var(--color-main-light);
-}
-/*-----------------------------------------------------------------------------
 	Status
 -----------------------------------------------------------------------------*/
 tr.status-ok:not(.selected) td:first-child {
@@ -1877,6 +1864,8 @@ tr.inactive:not(.selected) td:first-child {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -1893,8 +1882,9 @@ tr.inactive:not(.selected) td:first-child {
   position: relative;
   margin: 0;
   padding: var(--spacing-smallerish);
-  border: 1px solid var(--color-main);
+  border: 2px solid var(--color-main-lightest);
   background: var(--color-ui);
+  overflow: hidden;
 }
 .frame h1 {
   padding: var(--spacing-smallest);
@@ -1967,7 +1957,10 @@ tr.inactive:not(.selected) td:first-child {
           justify-content: flex-start;
   position: relative;
   padding: var(--spacing-smallest) var(--spacing-smallerish);
-  border-top: 1px solid var(--color-main-light);
+  border-top: 1px solid var(--color-accent-light);
+}
+.frame-header:last-of-type {
+  border-bottom: 1px solid var(--color-accent-light);
 }
 .frame-header h4 {
   display: -webkit-box;
@@ -2442,6 +2435,8 @@ fieldset.settings .collapsible {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -2630,6 +2625,8 @@ body#error {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -2783,6 +2780,8 @@ div.drawer.horizontal .contents {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -2971,6 +2970,8 @@ div.drawer.horizontal .contents {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -3129,6 +3130,8 @@ div.drawer.horizontal .contents {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -3281,6 +3284,8 @@ textarea:focus ~ .suggestions:not(:empty) {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -3621,6 +3626,8 @@ textarea:focus ~ .suggestions:not(:empty) {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -3808,6 +3815,8 @@ textarea:focus ~ .suggestions:not(:empty) {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -3823,8 +3832,6 @@ textarea:focus ~ .suggestions:not(:empty) {
 }
 .modal .modal-trigger {
   border-radius: 100%;
-  width: var(--spacing-small);
-  height: var(--spacing-small);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3834,6 +3841,7 @@ textarea:focus ~ .suggestions:not(:empty) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: var(--spacing-smallest);
 }
 .modal .modal-trigger svg {
   -ms-flex-negative: 0;
@@ -3852,6 +3860,7 @@ textarea:focus ~ .suggestions:not(:empty) {
   transition-property: opacity;
   transition-duration: var(--duration-shorter);
   overflow: hidden;
+  margin: 0;
 }
 .modal .modal-content.top {
   top: 0;
@@ -3864,10 +3873,6 @@ textarea:focus ~ .suggestions:not(:empty) {
 }
 .modal .modal-content.left {
   left: 0;
-}
-.modal .modal-content.is-open {
-  opacity: 1;
-  pointer-events: all;
 }
 .modal .modal-content button {
   display: -webkit-box;
@@ -3885,6 +3890,8 @@ textarea:focus ~ .suggestions:not(:empty) {
   border-radius: 0;
   font-size: var(--text-current);
   font-weight: 500;
+  margin: 0;
+  color: var(--color-main);
 }
 .modal .modal-content button svg {
   margin-right: var(--spacing-smallest);
@@ -3896,6 +3903,10 @@ textarea:focus ~ .suggestions:not(:empty) {
 .modal .modal-content button[name="action[delete]"]:hover {
   color: var(--color-clear);
   background-color: var(--color-error);
+}
+.modal.is-open .modal-content {
+  opacity: 1;
+  pointer-events: all;
 }
 #contents-actions .modal-trigger:hover {
   color: var(--color-clear);
@@ -3981,6 +3992,8 @@ textarea:focus ~ .suggestions:not(:empty) {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------

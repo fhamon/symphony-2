@@ -81,6 +81,8 @@
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -490,6 +492,8 @@ svg.placeholder {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -668,6 +672,8 @@ svg.placeholder {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -1431,6 +1437,8 @@ fieldset.settings:last-of-type {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
@@ -1447,8 +1455,9 @@ fieldset.settings:last-of-type {
   position: relative;
   margin: 0;
   padding: var(--spacing-smallerish);
-  border: 1px solid var(--color-main);
+  border: 2px solid var(--color-main-lightest);
   background: var(--color-ui);
+  overflow: hidden;
 }
 .frame h1 {
   padding: var(--spacing-smallest);
@@ -1521,7 +1530,10 @@ fieldset.settings:last-of-type {
           justify-content: flex-start;
   position: relative;
   padding: var(--spacing-smallest) var(--spacing-smallerish);
-  border-top: 1px solid var(--color-main-light);
+  border-top: 1px solid var(--color-accent-light);
+}
+.frame-header:last-of-type {
+  border-bottom: 1px solid var(--color-accent-light);
 }
 .frame-header h4 {
   display: -webkit-box;
@@ -1994,6 +2006,8 @@ fieldset.settings .collapsible {
   /*-----------------------------------------------------------------------------
 		Radius
 	-----------------------------------------------------------------------------*/
+  --radius-smallest: 2px;
+  --radius-small: 5px;
   --radius-current: 10px;
   --radius-big: 20px;
   /*-----------------------------------------------------------------------------
